@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import java.awt.Font;
@@ -79,8 +80,8 @@ public class WinConvert extends JFrame implements ActionListener {
 		
 		lblResultado = new JLabel("Conversion");
 		lblResultado.setBackground(new Color(255, 255, 128));
-		lblResultado.setForeground(new Color(255, 0, 0));
-		lblResultado.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		lblResultado.setForeground(new Color(0, 100, 0));
+		lblResultado.setFont(new Font("Tahoma", Font.BOLD, 22));
 		lblResultado.setBounds(10, 74, 547, 30);
 		contentPane.add(lblResultado);
 		
@@ -124,7 +125,12 @@ public class WinConvert extends JFrame implements ActionListener {
 	}
 	//metodo para verificar si es un numero valido
 	public double VerificarValorConvertir(String cantidad) {
-		return Double.parseDouble(cantidad);
+		if(cantidad.matches("[0-9]*")) {
+			return Double.parseDouble(cantidad);
+		}else {
+			JOptionPane.showMessageDialog(null,"Ingrese solo numeros para la cantidad","Error",JOptionPane.ERROR_MESSAGE);
+			return 0;
+		}
 				
 	}
 	//metodo para obtener los datos
