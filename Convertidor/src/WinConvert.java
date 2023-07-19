@@ -19,6 +19,11 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
 import java.awt.Point;
 import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class WinConvert extends JFrame implements ActionListener {
 
@@ -56,11 +61,15 @@ public class WinConvert extends JFrame implements ActionListener {
 		contentPane.add(lblTitulo);
 		
 		JLabel lblOrigen = new JLabel("Origen");
-		lblOrigen.setBounds(166, 21, 46, 14);
+		lblOrigen.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
+		lblOrigen.setForeground(new Color(0, 255, 0));
+		lblOrigen.setBounds(166, 21, 73, 14);
 		contentPane.add(lblOrigen);
 		
 		JLabel lblDestino = new JLabel("Destino");
-		lblDestino.setBounds(320, 21, 46, 14);
+		lblDestino.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 14));
+		lblDestino.setForeground(new Color(0, 255, 0));
+		lblDestino.setBounds(320, 21, 73, 14);
 		contentPane.add(lblDestino);
 		
 		cbOrigen = new JComboBox();
@@ -74,18 +83,27 @@ public class WinConvert extends JFrame implements ActionListener {
 		contentPane.add(cbDestino);
 		
 		btnConvertir = new JButton("Convertir");
-		btnConvertir.setBounds(468, 41, 89, 23);
 		btnConvertir.addActionListener(this);
+		
+		
+		btnConvertir.setBounds(468, 41, 89, 23);
 		contentPane.add(btnConvertir);
 		
 		lblResultado = new JLabel("Conversion");
 		lblResultado.setBackground(new Color(255, 255, 128));
-		lblResultado.setForeground(new Color(0, 100, 0));
+		lblResultado.setForeground(new Color(0, 0, 128));
 		lblResultado.setFont(new Font("Tahoma", Font.BOLD, 22));
 		lblResultado.setBounds(10, 74, 547, 30);
 		contentPane.add(lblResultado);
 		
 		txtDatos = new JTextField();
+		txtDatos.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusGained(FocusEvent e) {
+				txtDatos.setText("");
+			}
+		});
+		txtDatos.setHorizontalAlignment(SwingConstants.RIGHT);
 		txtDatos.setText("0");
 		txtDatos.setBounds(10, 41, 141, 22);
 		contentPane.add(txtDatos);
@@ -112,7 +130,7 @@ public class WinConvert extends JFrame implements ActionListener {
 					double conver = (valor * destino)/origen;
 					DecimalFormat df = new DecimalFormat("0.000");
 
-					lblResultado.setText(String.valueOf(valor)+ "-"+cbOrigen.getSelectedItem() +" =  "+ String.valueOf(df.format(conver))+"-"+cbDestino.getSelectedItem() );
+					lblResultado.setText(String.valueOf(valor)+ "("+cbOrigen.getSelectedItem() +") =  "+ String.valueOf(df.format(conver))+"("+cbDestino.getSelectedItem()+")" );
 			
 					}else {
 						lblResultado.setText("Es la misma moneda no es necesario Convertir");

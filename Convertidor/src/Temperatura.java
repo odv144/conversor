@@ -7,6 +7,7 @@ import javax.swing.JSlider;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Image;
+import java.text.DecimalFormat;
 
 import javax.swing.event.ChangeListener;
 import javax.swing.event.ChangeEvent;
@@ -130,14 +131,15 @@ public class Temperatura extends JFrame {
 		
 		SliCelcius.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
+				DecimalFormat df = new DecimalFormat("0.00");
 				temp = (double) SliCelcius.getValue();
 				lblCelsius.setText(String.valueOf(temp));
 				double tempF = CelciusAFahre(temp);
 				SliFare.setValue((int)tempF);
-				lblFaren.setText(String.valueOf(tempF));
+				lblFaren.setText(String.valueOf(df.format(tempF)));
 				double tempK = CelciusAKelvin(temp);
 				SliKelvin.setValue((int)tempK);
-				lblKelvin.setText(String.valueOf(tempK));
+				lblKelvin.setText(String.valueOf(df.format(tempK)));
 			}
 		});
 		
