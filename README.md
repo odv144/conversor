@@ -22,66 +22,37 @@ _Desarrollado en JAVA 20 con su IDE ECLIPSE_
 
 ### Instalación aun en prodeco de desarrollo🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
-
-```
-Da un ejemplo
-```
-
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+_Por el momento no esta terminada la etapa de distribucion mediante archivo exe o jar ya que esta en fase demo para ver el funciamiento descarge clone el repositorio de github_
 
 ## Ejecutando las pruebas ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+_Al ser una aplicacion mínima se presenta pruebas para el ingreso de datos solamente no hay muchas posibilidades de ingresos de datos_
 
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
 
 ## Despliegue 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
+_A continuacion dejo algunas imagenes para ejemplo que la aplicacion funcionando_
+
+## Menu Principal
+<img src="https://i.postimg.cc/7L89Hpjb/principal.jpg"><br><sub>Imagen principal del menu
+
+## Divisas
+<img src = "https://i.postimg.cc/zXQpMLjC/divisas.jpg"><br><sub>Pantalla con interface de conversion de divisas
+## Temperatura
+<img src = "https://i.postimg.cc/TPV9ptX0/TempFun.jpg"><br><sub>Pantalla de conversion de temperaturas 
 
 ## Construido con 🛠️
+* [Eclipse] Para desarrollo del codigo.
+* [Windows Builder] Plugin para desarrollo de la interface grafica mediante Libreria Swing.
+* 
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
 ## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+El versionado se realizo mediante esta plataforma GITHUB mediante un repositorio local y subiendo los cambios al concluirlos.
 
 ## Autores ✒️
+* **Virili Omar Dario** - *Alura Challeng Conversor y Documentacion del mismo* - [Virili Omar Dario] https://github.com/odv144
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Virili Omar Dario** - *Alura Challeng Conversor y Documentacion del mismo* - [villanuevand](https://github.com/villanuevand)
-
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
 ## Licencia 📄
 
