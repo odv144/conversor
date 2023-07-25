@@ -9,7 +9,7 @@ _Este aplicativo intenta facilitar la conversion de divisas varias, temperatura,
 ## Comenzando 🚀
 <h3>
   <p>
-    La aplicacion presenta una ventanta principal que funciona a modo de menu selector de funcioanlidad, cada boton responde a una nueva ventana que permite realizar la funcion elegida. Luego se puede cerrar la ventana secundaria y volver al menu principal. 
+    La aplicacion presenta una ventanta principal que funciona a modo de menu selector de funcionalidad, cada boton responde a una nueva ventana que permite realizar la funcion elegida. Luego se puede cerrar la ventana secundaria y volver al menu principal. 
   </p>
   <p>La aplicacion con su respectivo codigo fuente puede ser descargado y editado para poder adaptarlo a las necesidades propias</p>
 </h3>
